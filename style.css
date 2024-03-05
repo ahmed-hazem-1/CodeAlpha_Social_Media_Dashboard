@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Madimi One", sans-serif;
+    font-style: normal;
+
+}
+
+
+
+html {
+    height: auto;
+    min-height: 100vh;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 0.5fr 2.3fr 0.2fr;
+    min-height: 80vh;
+    height: 100%;
+
+}
+
+.left {
+    grid-column: auto;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+#Dashboard{
+    border-radius:0 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    text-align: center;
+    height: 100%;
+
+}
+#all{
+    transition: all 0.3s ease;
+}
+
+.social-block {
+    display: inline-block;
+    position: relative;
+    color: rgb(0, 0, 0);
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: white;
+    min-width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 5px #ffffff8c;
+    margin: 10px;
+}
+
+.left .social-link {
+    display: flex;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 0;
+    height: 40px;
+    min-width: 50px;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 0 15px 15px 0;
+
+}
+
+#face{
+    background-color: #3b5998;
+    color: white;
+    border: solid 1px white;
+}
+#face-page{
+    width: 100%;
+    height: 100%;
+    background-color: #3b5998;
+    color: white;
+    border: solid 1px white;
+
+}
+#insta{
+    background: linear-gradient(10deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a2b9d);
+    color: white;
+    border: solid 1px white;
+}
+#insta-page{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(10deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a2b9d);
+    color: white;
+    border: solid 1px white;
+}
+
+#twit{
+    background-color: #1da1f2;
+    color: white;
+    border: solid 1px white;
+}
+#twit-page{
+    width: 100%;
+    height: 100%;
+    background-color: #1da1f2;
+    color: white;
+    border: solid 1px white;
+}
+#linked{
+    background-color: #0077b5;
+    color: white;
+    border: solid 1px white;
+}
+
+#linked-page{
+    width: 100%;
+    height: 100%;
+    background-color: #0077b5;
+    color: white;
+    border: solid 1px white;
+}
+.social-block-footer{
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    right: 0.1em;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 2em;
+
+}
+.social-block-footer2{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    right: 0.1em;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 2em;
+}
+.rate {
+    display: inline-block;
+    margin: 20px 0px 20px 10px ;
+   align-self: center;
+    
+}
+
+.arrow-up {
+    display: inline;
+    margin: 20px 0px 20px  ;
+    
+    color: #4CAF50;
+}
+
+.arrow-down {
+    display: inline;
+    margin: 20px 0px 20px  ;
+   
+    color: #FF0000; 
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: var(--text-color);
+    text-align: center;
+    z-index: 10;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 4px;
+    color: var(--text-color);
+    text-align: center;
+}
+.navButton{
+    display: none;
+
+}
+
+@media (max-width: 868px) {
+   
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+    }
+
+    .right {
+        grid-column: 1 / -1;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        
+    }
+
+    header {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 2fr;
+        justify-content: space-around;
+    }
+
+    .navButton {
+        display: inline;
+        position: relative;
+        top: 10px;
+        right: 10px;
+        font-size: 2em;
+        color: var(--text-color);
+        white-space: nowrap; 
+        margin: 10px;
+    }
+
+    .navButton span {
+        display: inline-block; 
+        margin-right: 5px; 
+    }
+
+    body.left-visible .left {
+        display: block;
+    }
+    .social-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+    }
+    .social-block{
+        width: 80% !important;
+        margin:0;
+    }
+    #face-page,#insta-page,#twit-page,#linked-page{
+        width: 100% !important;
+        height: 100%;
+        margin: 0;
+        font-size: 0.8em;
+    }
+    #face,#insta,#twit,#linked{
+      margin: 15px 0;
+    }
+}
